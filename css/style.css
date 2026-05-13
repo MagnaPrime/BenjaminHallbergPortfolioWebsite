@@ -297,7 +297,7 @@ ul { list-style: none; }
   transform: translateY(-3px);
   box-shadow: 0 12px 36px rgba(0,0,0,0.65);
 }
-.project-card img {
+.project-card .card-cover {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -305,7 +305,71 @@ ul { list-style: none; }
   object-fit: cover;
   transition: transform 0.5s var(--ease);
 }
-.project-card:hover img { transform: scale(1.04); }
+
+/* ─── PROJECT CARD HOVER OVERLAY ─────────────────────────── */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem 1.1rem;
+  gap: 0.3rem;
+  background: linear-gradient(to bottom, #6b1b2f, #a02040);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+.project-card:hover .card-overlay { opacity: 1; }
+.card-company {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.4;
+}
+.card-title {
+  font-family: var(--font-d);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin: 0.2rem 0;
+}
+.card-roles {
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+}
+.card-tag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.25rem;
+  letter-spacing: 0.04em;
+}
+.card-engine {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.3rem;
+}
+.card-engine img {
+  height: 18px;
+  width: auto;
+  position: static;
+  inset: auto;
+  object-fit: initial;
+  transition: none;
+}
+.card-engine span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
 
 /* Info card (dark filled, no hero image) */
 .project-info-card {
@@ -367,14 +431,14 @@ ul { list-style: none; }
   display: flex;
   gap: 1.75rem;
   align-items: flex-start;
-  background: rgba(255,255,255,0.09);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.24);
   border-radius: 14px;
   padding: 1.75rem;
   margin-bottom: 1.25rem;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 28px rgba(0,0,0,0.35);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.50);
 }
 .commendation-item:last-child { margin-bottom: 0; }
 .commendation-aside {
