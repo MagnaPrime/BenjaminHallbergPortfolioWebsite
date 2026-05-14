@@ -758,20 +758,67 @@ ul { list-style: none; }
 body.modal-open { overflow: hidden; }
 
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
+
+/* ── Tablet (≤ 900px) ───────────────────────────────────────── */
 @media (max-width: 900px) {
+  /* Row 1: 2 cols; 3rd card spans full width below */
   .project-grid-row--3 { grid-template-columns: 1fr 1fr; }
-  .project-grid-row--3 .project-card:last-child { display: none; }
+  .project-grid-row--3 .project-card:nth-child(3) {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 7;
+  }
+  /* About page */
   .about-intro { grid-template-columns: 1fr; }
   .about-right { justify-content: flex-start; }
 }
 
+/* ── Mobile (≤ 600px) ───────────────────────────────────────── */
 @media (max-width: 600px) {
-  .project-grid-row--3,
-  .project-grid-row--2 { grid-template-columns: 1fr; }
-  .project-grid-row--3 .project-card:last-child { display: block; }
-  .project-grid-row--2 .project-card { aspect-ratio: 4/3; }
-  .nav-links { gap: 1rem; }
-  .contact-links { flex-direction: column; gap: 0.4rem; }
+  /* Navbar: tighten CV button */
+  .nav-links { gap: 1.2rem; }
+  .nav-cv { padding: 0.3rem 0.8rem; font-size: 0.72rem; }
+
+  /* Row 1: single column, all cards full width */
+  .project-grid-row--3 { grid-template-columns: 1fr; }
+  .project-grid-row--3 .project-card:nth-child(3) {
+    grid-column: auto;
+    aspect-ratio: 1;
+  }
+
+  /* Row 2: flex → column stack */
+  .project-grid-row--2 { flex-direction: column; align-items: stretch; }
+  .project-grid-row--2 .project-card {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Commendations: stack avatar row above quote */
+  .commendation-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .commendation-aside {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    gap: 0.9rem;
+  }
+  .commendation-quote { font-size: 0.88rem; }
+
+  /* Contact */
+  .contact-links { flex-direction: column; align-items: center; gap: 0.5rem; }
+
+  /* Footer: stack */
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 0.65rem; }
+  .footer-info { justify-content: center; gap: 0.5rem 1.25rem; }
+
+  /* Modal */
+  .modal-panel { padding: 1.75rem 1.5rem; }
+  .modal-title { font-size: 2rem; }
 }
   --dark-card:     #101010;
   --border:        rgba(255,255,255,0.07);
