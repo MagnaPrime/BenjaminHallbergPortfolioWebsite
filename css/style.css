@@ -649,6 +649,114 @@ ul { list-style: none; }
   margin-top: 0.2rem;
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   PROJECT MODAL
+═══════════════════════════════════════════════════════════════ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(17, 0, 28, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem var(--pad-x);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: rgba(36, 0, 58, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  transform: scale(0.95) translateY(18px);
+  transition: transform 0.35s var(--ease);
+}
+.modal-overlay.is-open .modal-panel {
+  transform: scale(1) translateY(0);
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+  transition: color 0.2s;
+}
+.modal-close:hover { color: #fff; }
+.modal-company {
+  font-size: 0.80rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.60);
+  margin-bottom: 0.4rem;
+}
+.modal-title {
+  font-family: var(--font-d);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.85rem;
+}
+.modal-roles {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.9;
+  margin-bottom: 0.75rem;
+}
+.modal-badge { margin-bottom: 1.25rem; }
+.modal-badge .card-tag {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+.modal-badge .card-engine { margin-top: 0; }
+.modal-badge .card-engine img { height: 68px; }
+.modal-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 1.25rem;
+}
+.modal-description {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.72);
+}
+.modal-trailer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.modal-trailer:hover { opacity: 0.7; }
+body.modal-open { overflow: hidden; }
+
 /* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .project-grid-row--3 { grid-template-columns: 1fr 1fr; }

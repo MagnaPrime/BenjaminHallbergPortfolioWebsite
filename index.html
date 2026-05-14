@@ -45,34 +45,34 @@
       <!-- Row 1: Three image cards -->
       <div class="project-grid-row project-grid-row--3">
 
-        <a href="#" class="project-card reveal">
+        <a href="#" class="project-card reveal" data-description="I worked on many of the experiences featured in the below trailer." data-trailer="https://youtu.be/EnWqvWWV1dc">
           <img class="card-cover" src="assets/images/Battlefield_6_png.png" alt="Battlefield 6">
           <div class="card-overlay">
-            <p class="card-company"><em>EA/Ripple Effect &amp; House of How</em></p>
+            <p class="card-company"><em>Ripple Effect/EA &amp; House of How</em></p>
             <h3 class="card-title">Battlefield 6</h3>
-            <p class="card-roles">Combat Design<br>System Design<br>Level Design</p>
-            <p class="card-tag">Portal</p>
+            <p class="card-roles">Level Design<br>Technical Design</p>
+            <p class="card-tag">Battlefield 6 Portal</p>
           </div>
         </a>
 
-        <a href="#" class="project-card reveal reveal-d1">
+        <a href="#" class="project-card reveal reveal-d1" data-description="I wrote design and animation specs and worked on combat and animation implementation.">
           <img class="card-cover" src="assets/images/CDxHoHAlt_png.png" alt="Crystal Dynamics × House of How">
           <div class="card-overlay">
             <p class="card-company"><em>Crystal Dynamics &amp; House of How</em></p>
             <h3 class="card-title">Unannounced<br>AAA Project</h3>
-            <p class="card-roles">Combat Design<br>System Design<br>Technical Animation</p>
+            <p class="card-roles">Combat Design<br>Technical Design</p>
             <div class="card-engine">
               <img src="assets/images/unreal.png" alt="Unreal Engine">
             </div>
           </div>
         </a>
 
-        <a href="#" class="project-card reveal reveal-d2">
+        <a href="#" class="project-card reveal reveal-d2" data-description="I led combat design on a large team, working iteratively and with effective task tracking.">
           <img class="card-cover" src="assets/images/wizard_png.png" alt="Project Wizard">
           <div class="card-overlay">
             <p class="card-company"><em>House of How</em></p>
             <h3 class="card-title">Project Wizard</h3>
-            <p class="card-roles">Combat Lead<br>System Design</p>
+            <p class="card-roles">Combat Lead<br>Technical Design</p>
             <div class="card-engine">
               <img src="assets/images/unreal.png" alt="Unreal Engine">
             </div>
@@ -84,22 +84,22 @@
       <!-- Row 2: Two image cards -->
       <div class="project-grid-row project-grid-row--2">
 
-        <a href="#" class="project-card reveal">
+        <a href="#" class="project-card reveal" data-description="I worked on 3 DLCs - Ichorous Grove, Endless Hordes &amp; Magic Carpet." data-trailer="https://youtu.be/Bpt6ALcrWJs">
           <img class="card-cover" src="assets/images/MinecraftLegends.png" alt="Minecraft Legends">
           <div class="card-overlay">
             <p class="card-company"><em>Mojang &amp; House of How</em></p>
             <h3 class="card-title">Minecraft Legends<br>DLC</h3>
-            <p class="card-roles">Combat Design<br>System Design<br>Level Design</p>
-            <p class="card-tag">In-house</p>
+            <p class="card-roles">Technical Design</p>
+            <p class="card-tag">In-house engine</p>
           </div>
         </a>
 
-        <a href="#" class="project-card reveal reveal-d1">
+        <a href="#" class="project-card reveal reveal-d1" data-description="I led a large team, working iteratively in accordance with client needs and with effective task tracking." data-trailer="https://youtu.be/Q-aXSqCxKfU">
           <img class="card-cover" src="assets/images/invincible.png" alt="Invincible: Doc Seismic Attacks">
           <div class="card-overlay">
             <p class="card-company"><em>Skybound Games &amp; House of How</em></p>
             <h3 class="card-title">Invincible: Doc<br>Seismic Attacks</h3>
-            <p class="card-roles">Sweden Lead<br>System Design<br>Level Design</p>
+            <p class="card-roles">Sweden Lead<br>Technical Design</p>
             <p class="card-tag">UEFN</p>
           </div>
         </a>
@@ -184,6 +184,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- ─── PROJECT MODAL ──────────────────────────────────────── -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-panel" id="modalPanel">
+      <button class="modal-close" id="modalClose" aria-label="Close">&#x2715;</button>
+      <p class="modal-company" id="modalCompany"></p>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-roles" id="modalRoles"></p>
+      <div class="modal-badge" id="modalBadge"></div>
+      <div class="modal-divider" id="modalDivider"></div>
+      <p class="modal-description" id="modalDescription"></p>
+      <a class="modal-trailer" id="modalTrailer" target="_blank" rel="noopener noreferrer">&#9654; Watch Trailer</a>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
