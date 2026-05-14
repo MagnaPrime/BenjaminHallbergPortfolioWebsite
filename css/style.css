@@ -767,6 +767,16 @@ body.modal-open { overflow: hidden; }
   .about-right { justify-content: flex-start; }
 }
 
+/* ── Narrow desktop / wide tablet (≤ 800px): scale card overlays ── */
+@media (max-width: 800px) {
+  .card-overlay { padding: 0.75rem 0.85rem; gap: 0.2rem; }
+  .card-title   { font-size: 1.25rem; }
+  .card-company { font-size: 0.78rem; }
+  .card-roles   { font-size: 0.82rem; }
+  .card-tag     { font-size: 0.9rem; margin-top: 0.15rem; }
+  .card-engine img { height: 46px; }
+}
+
 /* ── Mobile (≤ 600px) ───────────────────────────────────────── */
 @media (max-width: 600px) {
   /* Navbar: tighten CV button */
@@ -811,4 +821,12 @@ body.modal-open { overflow: hidden; }
   /* Modal */
   .modal-panel { padding: 1.75rem 1.5rem; }
   .modal-title { font-size: 2rem; }
+
+  /* Card overlay: scale down text for smaller cards */
+  .card-overlay { padding: 0.7rem 0.8rem; gap: 0.15rem; }
+  .card-title   { font-size: 1.2rem; }
+  .card-company { font-size: 0.72rem; }
+  .card-roles   { font-size: 0.75rem; line-height: 1.45; }
+  .card-tag     { font-size: 0.8rem; margin-top: 0.1rem; }
+  .card-engine img { height: 40px; }
 }
