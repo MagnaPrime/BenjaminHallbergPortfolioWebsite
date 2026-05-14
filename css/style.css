@@ -319,7 +319,7 @@ ul { list-style: none; }
   text-align: center;
   padding: 1rem 1.1rem;
   gap: 0.3rem;
-  background: linear-gradient(to bottom, #1e0038, #7a0080);
+  background: linear-gradient(to bottom, #0e1045, #5018a8);
   opacity: 0;
   transition: opacity 0.3s var(--ease);
 }
