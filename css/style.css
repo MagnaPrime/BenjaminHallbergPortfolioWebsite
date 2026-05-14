@@ -160,7 +160,7 @@ ul { list-style: none; }
   transition: background 0.35s, box-shadow 0.35s;
 }
 .navbar.scrolled {
-  background: rgba(19,43,97,0.88);
+  background: rgba(17,0,24,0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 1px 0 var(--border);
@@ -512,7 +512,7 @@ ul { list-style: none; }
    FOOTER
 ═══════════════════════════════════════════════════════════════ */
 .footer {
-  background: #0d1e48;
+  background: #110018;
   border-top: 1px solid rgba(255,255,255,0.10);
   padding: 1.5rem var(--pad-x);
 }
