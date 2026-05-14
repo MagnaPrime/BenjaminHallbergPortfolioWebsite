@@ -454,6 +454,7 @@ ul { list-style: none; }
   gap: 0.45rem;
 }
 .commendation-avatar {
+  flex-shrink: 0;
   width: 66px;
   height: 66px;
   border-radius: 50%;
